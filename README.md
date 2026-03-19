@@ -72,7 +72,7 @@ Raw data was imported into a Jupyter notebook using `pandas`, cleaned and transf
 
 ### 📊 Exploratory Data Analysis (EDA)
 
-The cleaned data was exported to MySQL workbench and then connected to Power BI for the analysis. Several techniques like aggregations, CTEs, and joins were used to glean insights using SQL. I then used Power BI to visualise the data and mapped NYC using zipcodes to identify violation hotspots across the city.
+The cleaned data was exported to MySQL workbench and then connected to Tableau Public for the analysis. Several techniques like aggregations, CTEs, and joins were used to glean insights using SQL. I then used Power BI to visualise the data and mapped NYC using zipcodes to identify violation hotspots across the city.
 
 ---
 
@@ -81,81 +81,26 @@ The cleaned data was exported to MySQL workbench and then connected to Power BI 
 ### 📌 Overall Insights  
 - There were **288867 total inspections** in over **30,360 different restaurants** across the city. **Manhattan** leads with 106,783 inspections, followed by Brooklyn and Queens with 74888 and 70693 inspections respectively.
 
-- **Cycle inspections** (215866, 75.7%) and **Pre-permit inspections** (56233, 19.7%) were the top inspection programmes with **initial inspection** (205252) and **re-inspection** (72471) being the top inspection phases.
-
-<br>
-<p align="center">
-  <img src="images/Overview.png" width="1200"/>
-</p>
-
-*A screenshot of the overview of the insights*
-
-<br>
+- Manhattan leads with the highest number of restaurants with **grade A restaurants(36908)**; Brooklyn has 36036 grade A.
+- Staten Island lead with highest rate of grade A (72.59%) , followed by Manhattan with 70.06%.
+- The commonest inspection programs are **Cycle inspection, pre-permit and adminstrative Miscellaneous inspections**. **Initial inspections** was the highest number of inspection phases with 205252 inspections. Re-inspection and Reopening inspection followed with 72471 and 3607 respectively
 
 
 ### 🚨 Violation Analysis 
 
 - The top 5 violations were **Facility Maintenance** (73430), **Food Protection & Pest Control** (54678), **Food Worker Hygiene and Other Food Protection** (52022), **Time and Temperature Control for Safety** (36742) and **Garbage, Waste Disposal and Pest Management** (33802).
 
-- Most of the violations 153133 (54.4%) were found to be **Critical** and so pose significant public health risk.
+- There were 153133 **critical** violations (54.44%) as compared to 128152 **non-critical** violations (45.56%).
 
-- Manhattan led the boroughs with the highest number of critical violations. The proportion of critical and non-critical violations were found to be similar across all  the boroughs. This means that in the broad sense, majority of the inspections across all the boroughs revealed critical violations. This finding is alarming.
+- All the boroughs had more than 50% of the restaurants flagged for critical violations. The analysis reveals that 55.7% of inspections in **Staten Island** had critical violations. **Queens** borough has 55% of inspections flagged with critical violations. **Brooklyn** had 54.9% of inspections flagged with critical violations.
 
-<br>
-
- *The table below shows the critical violation hotspots areas in each borough when mapped using zipcodes.*
-
-
-
-| Borough | Critical Hotspots (zipcode areas) |
-|--------------|-----------------------|
-|Manhattan | `10003`, `10019`, `10012` and `10013`|
-| Brooklyn | `11220`, `11201` and `11211` |
-| Bronx | `10458`, `10461`, and `10467` |
-| Queens |  `11354 `, `11101`, `11372` |
-|Staten Island | `10314`, `10306` and `10301` |
-
-<br>
-<p align="center">
-  <img src="images/Violation mapping.png" width="1200"/>
-</p>
-
-*A screenshot of the violation mapping of NYC using zipcodes.*
-
-<br>
 
 ### 🍽️ Cuisine Analysis  
 
-- The top cuisines were **American**, **Asian** and **Neutral cuisines**. Restaurants serving American cuisines had the highest number of critical violations with the hotspots being zipcode areas **`10001`**, **`10019`** and **`10036`** all in Manhattan.
+- Top 3 cuisine with highest grades are **North American**(75.38% grade A), **Neutral**(74.97% grade A) and **European**(68.65% grade A).
+- The **Filipino**(25.97% grade C),**Bangladeshi**(24.16% grade C),**Creole**(24.12% grade C),**Pakistani**(22.94 grade C) and **African**(21.72% grade C) are the top 5 cuisine with lowest score.
+- The cuisine with the highest proportion of 'Critical' are Czech(69.23%), Creole(60.32%), Bangladeshi(60.12%) and Pakistani(59.93%); The geographic cuisine with the highest proportion of 'Critical' is South Asian(58.94%); The geographic cuisine with the highest proportion of 'Critical' are Ethnic cuisine(55.65%) and Fine dining(55.36%) 
 
-- Area **`11365`** in Queens was the hotspot for critical violations for restaurants that serve **Asian Cuisines**.
-
-- For European cuisines, the critcal hotspots were found in areas in Manhattan.
-
-- Restaurants serving American cuisines had the highest number of grade A ratings.
-
-
-### 🗺️ Geographic and Temporal Trends
-
-- There has been a general increase in scores over the years for all the boroughs.
-
-<br>
-<p align="left">
-  <img src="images/annual_average_score.png" width="600"/>
-</p>
-
-*A screenshot of the annual average scores.*
-
-<br>
-
-
-- Manhattan having the highest number of restaurants leads in all the violations.
-
-- Manhattan also had the highest number of grade A restaurants.
-
-- The impact of COVID 19 pandemic exposes a gap in the inpections from 2020 to 2021. This is seen by drilling down the data in Power BI.
-
----
 
 ## 💡 Recommendations 
 
@@ -165,32 +110,14 @@ The cleaned data was exported to MySQL workbench and then connected to Power BI 
 4. Restaurants should adhere to temperature control guidelines.
 5. Pass legislation for restaurants to have internal quality assurance managers to ensure compliance to the health codes.
 
----
-
-## 🏁 Conclusion
-
-Common critical violations found were food protection and self control as well as food worker hygiene. These critcal violations were prevalent accross all boroughs even though certian areas seem to be hotspots.
-City authorities must come out with revised policies to protect the general public from the dire consequences of these critical violations.
-
----
-
-## 🔍 Further Analysis Opportunities
-
-- Predictive modeling for future violations  
-- Sentiment analysis from customer reviews  
-- Comparison with other cities
-
--------------
 
 📬 Contact
 If you'd like to connect, collaborate, or discuss this project further:
 
-📧 **Email:** mathiasofosu2@gmail.com
+📧 **Email:** felix.xuhaixin@gmail.com
 
-💼 **LinkedIn:** [Mathias Ofosu](https://linkedin.com/in/mathias-ofosu)
+🧠 **GitHub Profile:** [Felix Xu](https://github.com/Felix-Xuhaixin)
 
-🧠 **GitHub Profile:** [Mathias Ofosu](https://github.com/MKOfosu)
 
-🌟**Twitter/X:** [Mathias Ofosu](https://x.com/MKOfosu)
 
-Feel free to reach out. I’m always open to data-driven conversations on how to unlock actionable insights from your data.
+
