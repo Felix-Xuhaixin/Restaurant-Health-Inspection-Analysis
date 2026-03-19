@@ -50,26 +50,24 @@ Raw data was imported into a Jupyter notebook using `pandas`, cleaned and transf
 
 3. **Type Conversion**  
    Converted date fields (`inspection_date`, `grade_date`, `record_date`) to datetime format.
+   
+4. **Remove Irrelevant Columns**
+   Dropped fields which were irrelevant for the  analysis: 'building', 'phone', 'latitude', 'longitude', 'community_board', 'council_district', 'census_tract', 'bin','bbl','nta', 'location_point1'.
 
-6. **String Cleanup**  
-   Trimmed whitespace and converted `dba` names to title case.
-
-7. **Inspection Type Parsing**  
-   Split `inspection_type` into two new columns: `inspection_program` and `inspection_phase`.
-
-8. **Cuisine Categorization**  
+5. **Standardising the Cuisine_Description Columns**
    Standardized `cuisine_description` by:  
    - **Geographic origin** (e.g., African, European, American)  
    - **Thematic grouping** (e.g., ethnic, fast food, beverage)
 
-9. **Violation Grouping**  
+6. **Standardising the Cuisine_Description Columns**
+   Split `inspection_type` into two new columns: `inspection_program` and `inspection_phase`.
+
+10. **Standardising Violation Code**  
    Mapped 148 violation codes into broader categories using [NYC Health Code](https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-43593).
 
-10. **Missing Value Imputation**  
-   Filled gaps in `inspection_program`, `inspection_phase`, and `grade`.
+11. **Working With Null Values**  
+   Filled gaps in 'grade', 'grade_date', 'inspection_program', 'inspection_type','scroe', 'violation_code', 'violation_description and 'zipcode'.
 
-11. **Column Pruning**  
-    Dropped fields which were irrelevant for the analysis: `inspection_type`, `cuisine_description`, `action`, `violation_description`, `building`, `latitude`,`longitude`, `street`, `phone`, `community_board`, `council_district`, `bin`, `bbl`, `nta`, and `census_tract`.
 
 
 ### 📊 Exploratory Data Analysis (EDA)
