@@ -6,12 +6,6 @@
 
 NYC restaurant health inspections are designed to protect public health by ensuring food safety, sanitation, and regulatory compliance across all food service establishments. Inspectors check for compliance with New York City Health Code and New York State Sanitary Code, which set standards for cleanliness, food storage, pest control, and employee hygiene. The dataset includes restaurant details, location, cuisine descriptions, inspection results, grades, and violation types.
 
-### 🙏 Credit
-
-- **[Analyst Builder](https://www.analystbuilder.com/projects/restaurant-health-inspection-analysis-nyc-FhAOm)** for the datasets and the directions for the analysis.
-
-- **[NYC Environmental Health Services team at DOHMH](https://github.com/nycehs/NYC_geography)** for the topo-json of NYC.
-
 
 ## 🎯 Objectives
 
@@ -30,8 +24,8 @@ NYC restaurant health inspections are designed to protect public health by ensur
 
 - Data cleaning and transformation with Python  
 - SQL analysis using CTEs, subqueries, joins, and aggregations  
-- Interactive dashboards with Tableau Public  
-
+- Interactive dashboards with Tableau Public
+  
 ---
 
 ## ⚙️ Methodology  
@@ -42,32 +36,31 @@ Raw data was imported into a Jupyter notebook using `pandas`, cleaned and transf
 
 ### 🧹 Data Cleaning  
 
-1. **Initial Inspection**  
+1. **Initial Inspection**   
    Reviewed structure and content of the raw dataset. 
 
-2. **Duplicate Removal**
-   First, renamed all columns to lowercase and replaced spaces with underscores for consistency.Then dropped rows with identical `camis`, `inspection_date`, and `violation_code`.
+2. **Duplicate Removal**  
+   First, renamed all columns to lowercase and replaced spaces with underscores for consistency. Then dropped rows with identical `camis`, `inspection_date`, and `violation_code`.
 
 3. **Type Conversion**  
    Converted date fields (`inspection_date`, `grade_date`, `record_date`) to datetime format.
    
-4. **Remove Irrelevant Columns**
-   Dropped fields which were irrelevant for the  analysis: 'building', 'phone', 'latitude', 'longitude', 'community_board', 'council_district', 'census_tract', 'bin','bbl','nta', 'location_point1'.
+4. **Remove Irrelevant Columns**  
+   Dropped fields which were irrelevant for the  analysis: `building`, `phone`, `latitude`, `longitude`, `community_board`, `council_district`, `census_tract`, `bin`, `bbl`, `nta`, `location_point1`.
 
-5. **Standardising the Cuisine_Description Columns**
+5. **Standardising the Cuisine_Description Columns**  
    Standardized `cuisine_description` by:  
-   - **Geographic origin** (e.g., African, European, American)  
-   - **Thematic grouping** (e.g., ethnic, fast food, beverage)
+   **Geographic origin** (e.g., African, European, American)  
+   **Thematic grouping** (e.g., ethnic, fast food, beverage
 
-6. **Standardising the Cuisine_Description Columns**
+6. **Standardising the Cuisine_Description Columns**  
    Split `inspection_type` into two new columns: `inspection_program` and `inspection_phase`.
 
-10. **Standardising Violation Code**  
+7. **Standardising Violation Code**  
    Mapped 148 violation codes into broader categories using [NYC Health Code](https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCrules/0-0-0-43593).
 
-11. **Working With Null Values**  
-   Filled gaps in 'grade', 'grade_date', 'inspection_program', 'inspection_type','scroe', 'violation_code', 'violation_description and 'zipcode'.
-
+8. **Working With Null Values**  
+   Filled gaps in `grade`, `grade_date`, `inspection_program`, `inspection_type`, `scroe`, `violation_code`, `violation_description and 'zipcode`.
 
 
 ### 📊 Exploratory Data Analysis (EDA)
@@ -99,7 +92,7 @@ The cleaned data was exported to MySQL workbench and then connected to Tableau P
 
 - Top 3 cuisine with highest grades are **North American**(75.38% grade A), **Neutral**(74.97% grade A) and **European**(68.65% grade A).
 - The **Filipino**(25.97% grade C),**Bangladeshi**(24.16% grade C),**Creole**(24.12% grade C),**Pakistani**(22.94 grade C) and **African**(21.72% grade C) are the top 5 cuisine with lowest score.
-- The cuisine with the highest proportion of 'Critical' are Czech(69.23%), Creole(60.32%), Bangladeshi(60.12%) and Pakistani(59.93%); The geographic cuisine with the highest proportion of 'Critical' is South Asian(58.94%); The geographic cuisine with the highest proportion of 'Critical' are Ethnic cuisine(55.65%) and Fine dining(55.36%) 
+- The cuisine with the highest proportion of 'Critical' are **Czech**(69.23%), **Creole**(60.32%), **Bangladeshi**(60.12%) and **Pakistani**(59.93%); The geographic cuisine with the highest proportion of 'Critical' is **South Asian**(58.94%); The geographic cuisine with the highest proportion of 'Critical' are **Ethnic cuisine**(55.65%) and **Fine dining**(55.36%) 
 
 
 ## 💡 Recommendations 
@@ -110,6 +103,14 @@ The cleaned data was exported to MySQL workbench and then connected to Tableau P
 4. Restaurants should adhere to temperature control guidelines.
 5. Pass legislation for restaurants to have internal quality assurance managers to ensure compliance to the health codes.
 
+
+### 🙏 Credit
+
+- **[Analyst Builder](https://www.analystbuilder.com/projects/restaurant-health-inspection-analysis-nyc-FhAOm)** for the datasets and the directions for the analysis.
+
+- **[NYC Environmental Health Services team at DOHMH](https://github.com/nycehs/NYC_geography)** for the topo-json of NYC.  
+
+---
 
 📬 Contact
 If you'd like to connect, collaborate, or discuss this project further:
