@@ -65,7 +65,7 @@ Raw data was imported into a Jupyter notebook using `pandas`, cleaned and transf
 
 ### 📊 Exploratory Data Analysis (EDA)
 
-The cleaned data was exported to MySQL workbench and then connected to Tableau Public for the analysis. Several techniques like aggregations, CTEs, and joins were used to glean insights using SQL. I then used Power BI to visualise the data and mapped NYC using zipcodes to identify violation hotspots across the city.
+The cleaned data was exported to MySQL workbench and then connected to Tableau Public for the analysis. Several techniques like aggregations, CTEs, and joins were used to glean insights using SQL. I then used Tableau Public to visualise the data.
 
 ---
 
